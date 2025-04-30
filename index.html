@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .heading-container {
+            width: 700px;
+            text-align: center;
+            margin: 50px auto;
+        }
+
+        h1 {
+            color: #102E50;
+            text-decoration: underline wavy;
+        }
+
+        .btn {
+            padding: 7px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .btn-primary {
+            background-color: #102E50;
+            color: #fff;
+            border: none;
+        }
+
+        .btn-secondary {
+            background-color: #E78B48;
+            color: #fff;
+            border: none;
+        }
+
+        .main-container {
+            border: 1px solid black;
+            border-radius: 3px;
+            overflow: hidden;
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .container-left {
+            padding: 20px;
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .img-container {
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .img-container-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .img-container-left img {
+            width: 65px;
+            height: 65px;
+        }
+
+        .img-container-right {
+            width: 80%;
+            background: #000;
+        }
+
+        .img-container-right img {
+            width: 100%;
+            display: block;
+        }
+
+        .product-buttons {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+
+        }
+
+        .container-right {
+            background-color: rgb(224, 227, 232);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            width: 25%;
+        }
+
+        .star-number {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #rating-number {
+            font-size: 20px;
+        }
+
+        .star-img-container {
+            width: 170px;
+        }
+
+        #stars-img {
+            width: 27px;
+        }
+
+        .price-quantity-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .price-quantity-container div {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .inc-dec-images {
+            width: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 35px 0 15px;
+        }
+
+        .inc-dec-images img {
+            width: 25px;
+            cursor: pointer;
+        }
+
+        #quantity-text {
+            font-size: 25px;
+            font-weight: bold;
+            color: #535252;
+        }
+
+        .quantity {
+            color: #535252;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading-container">
+        <h1>OrderPoint</h1>
+    </div>
+
+    <div class="main-container">
+        <div class="container-left">
+            <div class="img-container">
+
+                <div class="img-container-left">
+                    <img src="./image/car1.jpg" alt="">
+                    <img src="./image/car2.jpg" alt="">
+                    <img src="./image/car3.jpg" alt="">
+                    <img src="./image/car4.jpg" alt="">
+                </div>
+
+                <div class="img-container-right">
+                    <img src="./image/colorful-eggs-driving.jpg" alt="Toy car" width="300px">
+                </div>
+
+            </div>
+
+            <div class="product-buttons">
+                <button class="btn btn-secondary">Previous Product</button>
+                <button class="btn btn-primary">Next Product</button>
+            </div>
+        </div>
+
+        <div class="container-right">
+
+            <div class="rating-container">
+
+                <div class="star-number">
+                    <p id="rating-number">5.0</p>
+
+                    <div class="star-img-container">
+                        <img id="stars-img" src="./image/star.png" alt="Stars">
+                        <img id="stars-img" src="./image/star.png" alt="Stars">
+                        <img id="stars-img" src="./image/star.png" alt="Stars">
+                        <img id="stars-img" src="./image/star.png" alt="Stars">
+                        <img id="stars-img" src="./image/star.png" alt="Stars">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="price-quantity-container">
+
+                <div>₹ <span id="price">199</span>
+                </div>
+
+                <div class="inc-dec-images">
+
+                    <img src="./image/minus.png" alt="minus icon" onclick="dec()">
+
+                    <p id="quantity-text">1</p>
+
+                    <img src="./image/add.png" alt="add icon" onclick="inc()">
+
+                </div>
+
+                <p class="quantity">Quantity</p>
+            </div>
+
+            <button class="btn btn-primary">
+                Place Order
+            </button>
+        </div>
+    </div>
+    <script>
+        const QuantityText = document.getElementById("quantity-text");
+        const productPrice = document.getElementById("price");
+        function inc() {
+            if (parseInt(QuantityText.innerText) == 10) {
+                alert("Quantity can not be greater than 10");
+                return;
+            }
+            QuantityText.innerText = parseInt(QuantityText.innerText) + 1;
+            pricemultiply();
+        }
+        function dec() {
+            if (parseInt(QuantityText.innerText) == 1) {
+                alert("Quantity can not be less than 1");
+                return;
+            }
+            QuantityText.innerText = parseInt(QuantityText.innerText) - 1;
+            pricedevide();
+        }
+
+        function pricemultiply() {
+            productPrice.innerText = parseInt(productPrice.innerText) * 2;
+        }
+
+        function pricedevide() {
+            productPrice.innerText = parseInt(productPrice.innerText) / 2;
+        }
+    </script>
+</body>
+
+</html>
