@@ -70,22 +70,22 @@ function glowstar5() {
   ratingNumber.style.color = "#009933";
 }
 
-function submitRating() {
-  const ratingValue = ratingNumber.innerText; // Get the current rating value
-  if (ratingValue === "0.0") {
-    alert("Please select a rating before submitting.");
-  } else {
-    alert("Thank you for your feedback! Your rating is: " + ratingValue);
-    // Reset the stars and rating number after submission
-    starImages1.src = "./image/star.png";
-    starImages2.src = "./image/star.png";
-    starImages3.src = "./image/star.png";
-    starImages4.src = "./image/star.png";
-    starImages5.src = "./image/star.png";
-    ratingNumber.innerText = "0.0";
-    ratingNumber.style.color = "#737171";
-  }
-}
+// function submitRating() {
+//   const ratingValue = ratingNumber.innerText; // Get the current rating value
+//   if (ratingValue === "0.0") {
+//     alert("Please select a rating before submitting.");
+//   } else {
+//     alert("Thank you for your feedback! Your rating is: " + ratingValue);
+//     // Reset the stars and rating number after submission
+//     starImages1.src = "./image/star.png";
+//     starImages2.src = "./image/star.png";
+//     starImages3.src = "./image/star.png";
+//     starImages4.src = "./image/star.png";
+//     starImages5.src = "./image/star.png";
+//     ratingNumber.innerText = "0.0";
+//     ratingNumber.style.color = "#737171";
+//   }
+// }
 
 function placeorder() {
   // const ratingValue = parseFloat(ratingNumber.innerText);
