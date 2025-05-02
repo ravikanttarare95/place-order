@@ -30,7 +30,7 @@
 
         h1 {
             color: #102E50;
-            text-decoration: underline wavy;
+            text-decoration: underline;
         }
 
         .btn {
@@ -46,10 +46,22 @@
             border: none;
         }
 
+        .btn-primary:hover {
+            box-shadow: 0 0 5px 2px hsl(240, 88%, 87%);
+        }
+
+
         .btn-secondary {
             background-color: #E78B48;
             color: #fff;
             border: none;
+        }
+
+        .btn-small {
+            padding: 4px 12px;
+            font-size: 15px;
+            border-radius: 4px;
+            cursor: pointer;
         }
 
         .main-container {
@@ -128,16 +140,22 @@
             align-items: center;
         }
 
+        .star-number button {
+            margin-left: auto;
+        }
+
         #rating-number {
             font-size: 23px;
             font-weight: bold;
             margin-right: 20px;
+            color: #737171;
         }
 
         .star-img-container {
             width: 170px;
             display: flex;
             justify-content: space-between;
+            margin-right: 10px;
         }
 
         .stars-img {
@@ -185,9 +203,6 @@
             }
 
             .main-container {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
                 width: 90%;
             }
 
@@ -196,19 +211,17 @@
                 padding: 2.5%;
             }
 
+            #rating-number {
+                margin-right: 10px;
+
+            }
+
             .stars-img {
                 width: 12%;
             }
         }
 
-        @media (min-width:501px) and (max-width:768px) {
-            .main-container {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                width: 70%;
-            }
-        }
+        @media (min-width:501px) and (max-width:768px) {}
 
         @media (max-width:768px) {
 
@@ -218,12 +231,25 @@
                 gap: 30px;
             }
 
-            .inc-dec-images {
-                width: 60%;
-            }
         }
 
         @media (max-width:992px) {
+            .main-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .inc-dec-images {
+                width: 60%;
+            }
+
+            .container-left,
+            .container-right {
+                width: 100%;
+                gap: 30px;
+            }
+
             .img-container {
                 flex-direction: column-reverse;
             }
@@ -274,14 +300,15 @@
             <div class="rating-container">
 
                 <div class="star-number">
-                    <p id="rating-number">5.0</p>
+                    <p id="rating-number">0.0</p>
                     <div class="star-img-container">
-                        <img class="stars-img" id="star-1-img" src="./image/star.png" alt="Star">
-                        <img class="stars-img" id="star-2-img" src="./image/star.png" alt="Star">
-                        <img class="stars-img" id="star-3-img" src="./image/star.png" alt="Star">
-                        <img class="stars-img" id="star-4-img" src="./image/star.png" alt="Star">
-                        <img class="stars-img" id="star-5-img" src="./image/star.png" alt="Star">
+                        <img class="stars-img" id="star-1-img" src="./image/star.png" alt="Star" onclick="glowstar1()">
+                        <img class="stars-img" id="star-2-img" src="./image/star.png" alt="Star" onclick="glowstar2()">
+                        <img class="stars-img" id="star-3-img" src="./image/star.png" alt="Star" onclick="glowstar3()">
+                        <img class="stars-img" id="star-4-img" src="./image/star.png" alt="Star" onclick="glowstar4()">
+                        <img class="stars-img" id="star-5-img" src="./image/star.png" alt="Star" onclick="glowstar5()">
                     </div>
+                    <button class="btn-small btn-primary" id="submit-rating" onclick="submitRating()">submit</button>
                 </div>
             </div>
 
@@ -298,11 +325,84 @@
             </div>
 
             <button class="btn btn-primary">
-                Place Order
+                Buy Now
             </button>
         </div>
     </div>
-    <script>
+    <script>//#F34D29 3
+        const starImages1 = document.getElementById("star-1-img");
+        const starImages2 = document.getElementById("star-2-img");
+        const starImages3 = document.getElementById("star-3-img");
+        const starImages4 = document.getElementById("star-4-img");
+        const starImages5 = document.getElementById("star-5-img");
+        const ratingNumber = document.getElementById("rating-number");
+
+        function glowstar1() {
+            starImages1.src = "./image/star(1).png";
+            starImages2.src = "./image/star.png";
+            starImages3.src = "./image/star.png";
+            starImages4.src = "./image/star.png";
+            starImages5.src = "./image/star.png";
+            ratingNumber.innerText = "1.0";
+            ratingNumber.style.color = "#FF0000";
+        }
+
+        function glowstar2() {
+            starImages1.src = "./image/star(1).png";
+            starImages2.src = "./image/star(1).png";
+            starImages3.src = "./image/star.png";
+            starImages4.src = "./image/star.png";
+            starImages5.src = "./image/star.png";
+            ratingNumber.innerText = "2.0";
+            ratingNumber.style.color = "#FF0000";
+        }
+
+        function glowstar3() {
+            starImages1.src = "./image/star(3).png";
+            starImages2.src = "./image/star(3).png";
+            starImages3.src = "./image/star(3).png";
+            starImages4.src = "./image/star.png";
+            starImages5.src = "./image/star.png";
+            ratingNumber.innerText = "3.0";
+            ratingNumber.style.color = "#ff5c33";
+        }
+        function glowstar4() {
+            starImages1.src = "./image/star(5).png";
+            starImages2.src = "./image/star(5).png";
+            starImages3.src = "./image/star(5).png";
+            starImages4.src = "./image/star(5).png";
+            starImages5.src = "./image/star.png";
+            ratingNumber.innerText = "4.0";
+            ratingNumber.style.color = "#009933";
+        }
+
+        function glowstar5() {
+            starImages1.src = "./image/star(5).png";
+            starImages2.src = "./image/star(5).png";
+            starImages3.src = "./image/star(5).png";
+            starImages4.src = "./image/star(5).png";
+            starImages5.src = "./image/star(5).png";
+            ratingNumber.innerText = "5.0";
+            ratingNumber.style.color = "#009933";
+        }
+
+        function submitRating() {
+            const ratingValue = ratingNumber.innerText;
+            if (ratingValue === "0.0") {
+                alert("Please select a rating before submitting.");
+            } else {
+                alert("Thank you for your feedback! Your rating is: " + ratingValue);
+                // Reset the stars and rating number after submission
+                starImages1.src = "./image/star.png";
+                starImages2.src = "./image/star.png";
+                starImages3.src = "./image/star.png";
+                starImages4.src = "./image/star.png";
+                starImages5.src = "./image/star.png";
+                ratingNumber.innerText = "0.0";
+                ratingNumber.style.color = "#737171";
+            }
+        }
+
         const QuantityText = document.getElementById("quantity-text");
         const productPrice = document.getElementById("price");
         function inc() {
