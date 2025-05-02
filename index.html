@@ -13,7 +13,7 @@
 
 <body>
     <div class="color-mode-container">
-        <img src="./image/light-mode.png" alt="Sun Icon" width="45px">
+        <img src="./image/light-mode.png" alt="Sun Icon" width="45px" id="light-mode-icon" onclick="toggleLightMode()">
     </div>
     <div class="heading-container">
         <h1>OrderPoint</h1>
@@ -24,10 +24,10 @@
             <div class="img-container">
 
                 <div class="img-container-left">
-                    <div><img src="./image/shoe-1.jpg" alt="Shoe" id="shoe-1" onmouseover="changeProductImage1()"></div>
-                    <div><img src="./image/shoe-2.jpg" alt="Shoe" id="shoe-2" onmouseover="changeProductImage2()"></div>
-                    <div><img src="./image/shoe-3.jpg" alt="Shoe" id="shoe-3" onmouseover="changeProductImage3()"></div>
-                    <div><img src="./image/shoe-4.jpg" alt="Shoe" id="shoe-4" onmouseover="changeProductImage4()"></div>
+                    <div onmouseover="showProductImage1()"><img src="./image/shoe-1.jpg" alt="Shoe" id="shoe-1"></div>
+                    <div onmouseover="showProductImage2()"><img src="./image/shoe-2.jpg" alt="Shoe" id="shoe-2"></div>
+                    <div onmouseover="showProductImage3()"><img src="./image/shoe-3.jpg" alt="Shoe" id="shoe-3"></div>
+                    <div onmouseover="showProductImage4()"><img src="./image/shoe-4.jpg" alt="Shoe" id="shoe-4"></div>
                 </div>
 
                 <div class="img-container-right">
@@ -38,7 +38,7 @@
 
             <div class="product-buttons">
                 <button class="btn btn-primary">Previous Product</button>
-                <button class="btn btn-primary">Next Product</button>
+                <button class="btn btn-primary" onclick="nextProductImage()">Next Product</button>
             </div>
         </div>
 
