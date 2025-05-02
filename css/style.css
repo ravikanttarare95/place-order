@@ -52,6 +52,13 @@ h1 {
     cursor: pointer;
 }
 
+.color-mode-container{
+        position: fixed;
+        top: 10px;
+        right: 10px;
+
+}
+
 .main-container {
     border-radius: 5px;
     overflow: hidden;
