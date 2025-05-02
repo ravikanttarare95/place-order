@@ -65,14 +65,13 @@
         }
 
         .main-container {
-            border: 2px solid #BE3D2A;
             border-radius: 5px;
             overflow: hidden;
             width: 80%;
             margin: 0 auto 50px;
             display: flex;
             justify-content: space-between;
-            box-shadow: 0 3px 10px 0 hsl(18, 88%, 87%);
+            box-shadow: 0 0 7px 0 #666;
             background: #ffffff;
         }
 
@@ -323,7 +322,7 @@
                 <p class="quantity">Quantity</p>
             </div>
 
-            <button class="btn btn-primary" onclick="alert('Order Placed')">
+            <button class="btn btn-primary" onclick="placeorder()">
                 Place Order
             </button>
         </div>
@@ -335,6 +334,7 @@
         const starImages4 = document.getElementById("star-4-img");
         const starImages5 = document.getElementById("star-5-img");
         const ratingNumber = document.getElementById("rating-number");
+        const ratingValue = ratingNumber.innerText;
 
         function glowstar1() {
             starImages1.src = "./image/star(1).png";
@@ -386,7 +386,7 @@
         }
 
         function submitRating() {
-            const ratingValue = ratingNumber.innerText;
+            const ratingValue = ratingNumber.innerText; // Get the current rating value
             if (ratingValue === "0.0") {
                 alert("Please select a rating before submitting.");
             } else {
@@ -402,6 +402,19 @@
             }
         }
 
+        function placeorder() {
+            // const ratingValue = parseFloat(ratingNumber.innerText);
+            // if (ratingValue === "1.0" || ratingValue === "2.0" || ratingValue === "3.0 || ratingValue === "4.0" || ratingValue === "5.0")
+            // {
+            //     alert("Please submit the rating before you place order.");
+            // } 
+            // else 
+            {
+                const quantity = document.getElementById("quantity-text").innerText;
+                const price = document.getElementById("price").innerText;
+                alert("Your order has been placed successfully!\nQuantity: " + quantity + "\nTotal Price: ₹" + price);
+            }
+        }
         const QuantityText = document.getElementById("quantity-text");
         const productPrice = document.getElementById("price");
         function inc() {
