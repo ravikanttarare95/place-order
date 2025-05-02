@@ -55,6 +55,37 @@ function showProductImage4(imageSrc) {
   }
 }
 
+function previousProductImage() {
+  const productMainImage = document.getElementById("product-main-img");
+  const productImage1 = document.getElementById("shoe-1");
+  const productImage2 = document.getElementById("shoe-2");
+  const productImage3 = document.getElementById("shoe-3");
+  const productImage4 = document.getElementById("shoe-4");
+  if (
+    productMainImage.src.includes("camera-1.png") ||
+    productMainImage.src.includes("camera-2.png") ||
+    productMainImage.src.includes("camera-3.png") ||
+    productMainImage.src.includes("camera-4.png")
+  ) {
+    productMainImage.src = "./image/mobile-1.jpg";
+    productImage1.src = "./image/mobile-1.jpg";
+    productImage2.src = "./image/mobile-2.png";
+    productImage3.src = "./image/mobile-3.jpeg";
+    productImage4.src = "./image/mobile-4.png";
+  } else if (
+    productMainImage.src.includes("mobile-1.jpg") ||
+    productMainImage.src.includes("mobile-2.png") ||
+    productMainImage.src.includes("mobile-3.jpeg") ||
+    productMainImage.src.includes("mobile-4.png")
+  ) {
+    productMainImage.src = "./image/shoe-1.jpg";
+    productImage1.src = "./image/shoe-1.jpg";
+    productImage2.src = "./image/shoe-2.jpg";
+    productImage3.src = "./image/shoe-3.jpg";
+    productImage4.src = "./image/shoe-4.jpg";
+  }
+}
+
 function nextProductImage() {
   const productMainImage = document.getElementById("product-main-img");
   const productImage1 = document.getElementById("shoe-1");
