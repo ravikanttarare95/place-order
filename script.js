@@ -1,7 +1,16 @@
 const productMainImage = document.getElementById("product-main-img");
 
-function changeImage(imageSrc) {
+function changeProductImage1(imageSrc) {
+  productMainImage.src = "./image/shoe-1.jpg";
+}
+function changeProductImage2(imageSrc) {
   productMainImage.src = "./image/shoe-2.jpg";
+}
+function changeProductImage3(imageSrc) {
+  productMainImage.src = "./image/shoe-3.jpg";
+}
+function changeProductImage4(imageSrc) {
+  productMainImage.src = "./image/shoe-4.jpg";
 }
 
 const starImages1 = document.getElementById("star-1-img");
@@ -24,7 +33,7 @@ function glowstar1() {
 
 function glowstar2() {
   starImages1.src = "./image/star(5).png";
-  starImages2.src = "./image/star(5).png";  
+  starImages2.src = "./image/star(5).png";
   starImages3.src = "./image/star.png";
   starImages4.src = "./image/star.png";
   starImages5.src = "./image/star.png";
