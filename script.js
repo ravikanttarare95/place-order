@@ -1,11 +1,25 @@
 function toggleLightMode() {
-  const lightModeIcon = document.getElementById("light-mode-icon");
+  const mainHeading = document.getElementById("main-heading");
+  const mainContainer = document.getElementById("container-main");
+  const lightModeIcon = document.getElementById("dark-mode-icon");
+  const containerRight = document.getElementById("container-right");
+  const body = document.body;
+
   if (lightModeIcon.src.includes("light-mode.png")) {
     lightModeIcon.src = "./image/dark-mode.png";
+    mainHeading.classList.remove("color-white");
+    mainContainer.classList.remove("main-container-dark-mode");
+    mainContainer.classList.add("main-container");
+    body.classList.remove("dark-mode-bg-color-body");
   } else if (lightModeIcon.src.includes("dark-mode.png")) {
     lightModeIcon.src = "./image/light-mode.png";
+    mainHeading.classList.add("color-white");
+    mainContainer.classList.add("main-container-dark-mode");
+    mainContainer.classList.remove("main-container");
+    body.classList.add("dark-mode-bg-color-body");
   }
 }
+
 const productImage1 = document.getElementById("shoe-1");
 const productImage2 = document.getElementById("shoe-2");
 const productImage3 = document.getElementById("shoe-3");
