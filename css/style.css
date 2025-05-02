@@ -13,12 +13,11 @@ body {
 .heading-container {
     width: 70%;
     text-align: center;
-    margin: 50px auto;
+    margin: 30px auto;
 }
 
 h1 {
     color: #102E50;
-    text-decoration: underline;
 }
 
 .btn {
