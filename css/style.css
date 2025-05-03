@@ -111,7 +111,7 @@ h1 {
 
 .img-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .img-container-left {
@@ -133,12 +133,13 @@ h1 {
 }
 
 .img-container-right {
-  width: 500px;
+  max-width: 545px;
   margin-left: 3.5%;
 }
 
 .img-container-right img {
   width: 100%;
+  height: auto;
   display: block;
   /* border: 1px solid #E78B48;   */
 }
