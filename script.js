@@ -27,10 +27,10 @@ const productImage4 = document.getElementById("shoe-4");
 function showProductImage1(imageSrc) {
   const productMainImage = document.getElementById("product-main-img");
 
-  if (productImage1.src.includes("shoe-1.jpg")) {
-    productMainImage.src = "./image/shoe-1.jpg";
-  } else if (productImage1.src.includes("mobile-1.jpg")) {
-    productMainImage.src = "./image/mobile-1.jpg";
+  if (productImage1.src.includes("shoe-1.png")) {
+    productMainImage.src = "./image/shoe-1.png";
+  } else if (productImage1.src.includes("mobile-1.png")) {
+    productMainImage.src = "./image/mobile-1.png";
   } else if (productImage1.src.includes("camera-1.png")) {
     productMainImage.src = "./image/camera-1.png";
   }
@@ -39,30 +39,30 @@ function showProductImage1(imageSrc) {
 }
 function showProductImage2(imageSrc) {
   const productMainImage = document.getElementById("product-main-img");
-  if (productImage2.src.includes("shoe-2.jpg")) {
-    productMainImage.src = "./image/shoe-2.jpg";
-  } else if (productImage2.src.includes("mobile-2.jpg")) {
-    productMainImage.src = "./image/mobile-2.jpg";
-  } else if (productImage2.src.includes("camera-2.jpg")) {
-    productMainImage.src = "./image/camera-2.jpg";
+  if (productImage2.src.includes("shoe-2.png")) {
+    productMainImage.src = "./image/shoe-2.png";
+  } else if (productImage2.src.includes("mobile-2.png")) {
+    productMainImage.src = "./image/mobile-2.png";
+  } else if (productImage2.src.includes("camera-2.png")) {
+    productMainImage.src = "./image/camera-2.png";
   }
 }
 function showProductImage3(imageSrc) {
   const productMainImage = document.getElementById("product-main-img");
-  if (productImage3.src.includes("shoe-3.jpg")) {
-    productMainImage.src = "./image/shoe-3.jpg";
-  } else if (productImage3.src.includes("mobile-3.jpg")) {
-    productMainImage.src = "./image/mobile-3.jpg";
+  if (productImage3.src.includes("shoe-3.png")) {
+    productMainImage.src = "./image/shoe-3.png";
+  } else if (productImage3.src.includes("mobile-3.png")) {
+    productMainImage.src = "./image/mobile-3.png";
   } else if (productImage3.src.includes("camera-3.png")) {
     productMainImage.src = "./image/camera-3.png";
   }
 }
 function showProductImage4(imageSrc) {
   const productMainImage = document.getElementById("product-main-img");
-  if (productImage4.src.includes("shoe-4.jpg")) {
-    productMainImage.src = "./image/shoe-4.jpg";
-  } else if (productImage4.src.includes("mobile-4.jpg")) {
-    productMainImage.src = "./image/mobile-4.jpg";
+  if (productImage4.src.includes("shoe-4.png")) {
+    productMainImage.src = "./image/shoe-4.png";
+  } else if (productImage4.src.includes("mobile-4.png")) {
+    productMainImage.src = "./image/mobile-4.png";
   } else if (productImage4.src.includes("camera-4.png")) {
     productMainImage.src = "./image/camera-4.png";
   }
@@ -79,29 +79,29 @@ function previousProductImage() {
   const QuantityText = document.getElementById("quantity-text");
   if (
     productMainImage.src.includes("camera-1.png") ||
-    productMainImage.src.includes("camera-2.jpg") ||
+    productMainImage.src.includes("camera-2.png") ||
     productMainImage.src.includes("camera-3.png") ||
     productMainImage.src.includes("camera-4.png")
   ) {
-    productMainImage.src = "./image/mobile-1.jpg";
-    productImage1.src = "./image/mobile-1.jpg";
-    productImage2.src = "./image/mobile-2.jpg";
-    productImage3.src = "./image/mobile-3.jpg";
-    productImage4.src = "./image/mobile-4.jpg";
+    productMainImage.src = "./image/mobile-1.png";
+    productImage1.src = "./image/mobile-1.png";
+    productImage2.src = "./image/mobile-2.png";
+    productImage3.src = "./image/mobile-3.png";
+    productImage4.src = "./image/mobile-4.png";
     productName.innerText = "Motorola g45 5G (Viva Magenta, 128 GB) (8 GB RAM)";
     productPrice.innerText = "11999";
     QuantityText.innerText = "1";
   } else if (
-    productMainImage.src.includes("mobile-1.jpg") ||
-    productMainImage.src.includes("mobile-2.jpg") ||
-    productMainImage.src.includes("mobile-3.jpg") ||
-    productMainImage.src.includes("mobile-4.jpg")
+    productMainImage.src.includes("mobile-1.png") ||
+    productMainImage.src.includes("mobile-2.png") ||
+    productMainImage.src.includes("mobile-3.png") ||
+    productMainImage.src.includes("mobile-4.png")
   ) {
-    productMainImage.src = "./image/shoe-1.jpg";
-    productImage1.src = "./image/shoe-1.jpg";
-    productImage2.src = "./image/shoe-2.jpg";
-    productImage3.src = "./image/shoe-3.jpg";
-    productImage4.src = "./image/shoe-4.jpg";
+    productMainImage.src = "./image/shoe-1.png";
+    productImage1.src = "./image/shoe-1.png";
+    productImage2.src = "./image/shoe-2.png";
+    productImage3.src = "./image/shoe-3.png";
+    productImage4.src = "./image/shoe-4.png";
     productName.innerText =
       "Leather Officer Class Stylish Formal Brogues (Tan , 6)";
     productPrice.innerText = "2140";
@@ -119,28 +119,28 @@ function nextProductImage() {
   const productPrice = document.getElementById("price");
   const QuantityText = document.getElementById("quantity-text");
   if (
-    productMainImage.src.includes("shoe-1.jpg") ||
-    productMainImage.src.includes("shoe-2.jpg") ||
-    productMainImage.src.includes("shoe-3.jpg") ||
-    productMainImage.src.includes("shoe-4.jpg")
+    productMainImage.src.includes("shoe-1.png") ||
+    productMainImage.src.includes("shoe-2.png") ||
+    productMainImage.src.includes("shoe-3.png") ||
+    productMainImage.src.includes("shoe-4.png")
   ) {
-    productMainImage.src = "./image/mobile-1.jpg";
-    productImage1.src = "./image/mobile-1.jpg";
-    productImage2.src = "./image/mobile-2.jpg";
-    productImage3.src = "./image/mobile-3.jpg";
-    productImage4.src = "./image/mobile-4.jpg";
+    productMainImage.src = "./image/mobile-1.png";
+    productImage1.src = "./image/mobile-1.png";
+    productImage2.src = "./image/mobile-2.png";
+    productImage3.src = "./image/mobile-3.png";
+    productImage4.src = "./image/mobile-4.png";
     productName.innerText = "Motorola g45 5G (Viva Magenta, 128 GB) (8 GB RAM)";
     productPrice.innerText = "11999";
     QuantityText.innerText = "1";
   } else if (
-    productMainImage.src.includes("mobile-1.jpg") ||
-    productMainImage.src.includes("mobile-2.jpg") ||
-    productMainImage.src.includes("mobile-3.jpg") ||
-    productMainImage.src.includes("mobile-4.jpg")
+    productMainImage.src.includes("mobile-1.png") ||
+    productMainImage.src.includes("mobile-2.png") ||
+    productMainImage.src.includes("mobile-3.png") ||
+    productMainImage.src.includes("mobile-4.png")
   ) {
     productMainImage.src = "./image/camera-1.png";
     productImage1.src = "./image/camera-1.png";
-    productImage2.src = "./image/camera-2.jpg";
+    productImage2.src = "./image/camera-2.png";
     productImage3.src = "./image/camera-3.png";
     productImage4.src = "./image/camera-4.png";
     productName.innerText = "EOS R100 (RF-S18-45mm f/4.5-6.3 IS STM)";
@@ -225,11 +225,11 @@ function dec() {
   pricedevide();
 }
 
-function pricemultiply() {
+function pricemultiply() {//logic is not proper : need changes
   productPrice.innerText = parseInt(productPrice.innerText) * 2;
 }
 
-function pricedevide() {
+function pricedevide() {//logic is not proper : need changes
   productPrice.innerText = parseInt(productPrice.innerText) / 2;
 }
 
