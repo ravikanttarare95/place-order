@@ -15,7 +15,6 @@ function toggleLightMode() {
     lightModeIcon.src = "./image/light-mode.png";
     mainHeading.classList.add("color-white");
     mainContainer.classList.add("main-container-dark-mode");
-    mainContainer.classList.remove("main-container");
     body.classList.add("dark-mode-bg-color-body");
   }
 }
@@ -42,18 +41,18 @@ function showProductImage2(imageSrc) {
   const productMainImage = document.getElementById("product-main-img");
   if (productImage2.src.includes("shoe-2.jpg")) {
     productMainImage.src = "./image/shoe-2.jpg";
-  } else if (productImage2.src.includes("mobile-2.png")) {
-    productMainImage.src = "./image/mobile-2.png";
-  } else if (productImage2.src.includes("camera-2.png")) {
-    productMainImage.src = "./image/camera-2.png";
+  } else if (productImage2.src.includes("mobile-2.jpg")) {
+    productMainImage.src = "./image/mobile-2.jpg";
+  } else if (productImage2.src.includes("camera-2.jpg")) {
+    productMainImage.src = "./image/camera-2.jpg";
   }
 }
 function showProductImage3(imageSrc) {
   const productMainImage = document.getElementById("product-main-img");
   if (productImage3.src.includes("shoe-3.jpg")) {
     productMainImage.src = "./image/shoe-3.jpg";
-  } else if (productImage3.src.includes("mobile-3.jpeg")) {
-    productMainImage.src = "./image/mobile-3.jpeg";
+  } else if (productImage3.src.includes("mobile-3.jpg")) {
+    productMainImage.src = "./image/mobile-3.jpg";
   } else if (productImage3.src.includes("camera-3.png")) {
     productMainImage.src = "./image/camera-3.png";
   }
@@ -62,8 +61,8 @@ function showProductImage4(imageSrc) {
   const productMainImage = document.getElementById("product-main-img");
   if (productImage4.src.includes("shoe-4.jpg")) {
     productMainImage.src = "./image/shoe-4.jpg";
-  } else if (productImage4.src.includes("mobile-4.png")) {
-    productMainImage.src = "./image/mobile-4.png";
+  } else if (productImage4.src.includes("mobile-4.jpg")) {
+    productMainImage.src = "./image/mobile-4.jpg";
   } else if (productImage4.src.includes("camera-4.png")) {
     productMainImage.src = "./image/camera-4.png";
   }
@@ -77,20 +76,20 @@ function previousProductImage() {
   const productImage4 = document.getElementById("shoe-4");
   if (
     productMainImage.src.includes("camera-1.png") ||
-    productMainImage.src.includes("camera-2.png") ||
+    productMainImage.src.includes("camera-2.jpg") ||
     productMainImage.src.includes("camera-3.png") ||
     productMainImage.src.includes("camera-4.png")
   ) {
     productMainImage.src = "./image/mobile-1.jpg";
     productImage1.src = "./image/mobile-1.jpg";
-    productImage2.src = "./image/mobile-2.png";
-    productImage3.src = "./image/mobile-3.jpeg";
-    productImage4.src = "./image/mobile-4.png";
+    productImage2.src = "./image/mobile-2.jpg";
+    productImage3.src = "./image/mobile-3.jpg";
+    productImage4.src = "./image/mobile-4.jpg";
   } else if (
-    productMainImage.src.includes("mobile-1.jpg") ||
-    productMainImage.src.includes("mobile-2.png") ||
-    productMainImage.src.includes("mobile-3.jpeg") ||
-    productMainImage.src.includes("mobile-4.png")
+    productMainImage.src.includes("mobile-1.jpg") || 
+    productMainImage.src.includes("mobile-2.jpg") ||
+    productMainImage.src.includes("mobile-3.jpg") ||
+    productMainImage.src.includes("mobile-4.jpg")
   ) {
     productMainImage.src = "./image/shoe-1.jpg";
     productImage1.src = "./image/shoe-1.jpg";
@@ -114,18 +113,18 @@ function nextProductImage() {
   ) {
     productMainImage.src = "./image/mobile-1.jpg";
     productImage1.src = "./image/mobile-1.jpg";
-    productImage2.src = "./image/mobile-2.png";
-    productImage3.src = "./image/mobile-3.jpeg";
-    productImage4.src = "./image/mobile-4.png";
+    productImage2.src = "./image/mobile-2.jpg";
+    productImage3.src = "./image/mobile-3.jpg";
+    productImage4.src = "./image/mobile-4.jpg";
   } else if (
     productMainImage.src.includes("mobile-1.jpg") ||
-    productMainImage.src.includes("mobile-2.png") ||
-    productMainImage.src.includes("mobile-3.jpeg") ||
-    productMainImage.src.includes("mobile-4.png")
+    productMainImage.src.includes("mobile-2.jpg") ||
+    productMainImage.src.includes("mobile-3.jpg") ||
+    productMainImage.src.includes("mobile-4.jpg")
   ) {
     productMainImage.src = "./image/camera-1.png";
     productImage1.src = "./image/camera-1.png";
-    productImage2.src = "./image/camera-2.png";
+    productImage2.src = "./image/camera-2.jpg";
     productImage3.src = "./image/camera-3.png";
     productImage4.src = "./image/camera-4.png";
   }
@@ -188,30 +187,7 @@ function glowstar5() {
   ratingNumber.style.color = "#009933";
 }
 
-// function submitRating() {
-//   const ratingValue = ratingNumber.innerText; // Get the current rating value
-//   if (ratingValue === "0.0") {
-//     alert("Please select a rating before submitting.");
-//   } else {
-//     alert("Thank you for your feedback! Your rating is: " + ratingValue);
-//     // Reset the stars and rating number after submission
-//     starImages1.src = "./image/star.png";
-//     starImages2.src = "./image/star.png";
-//     starImages3.src = "./image/star.png";
-//     starImages4.src = "./image/star.png";
-//     starImages5.src = "./image/star.png";
-//     ratingNumber.innerText = "0.0";
-//     ratingNumber.style.color = "#737171";
-//   }
-// }
-
 function placeorder() {
-  // const ratingValue = parseFloat(ratingNumber.innerText);
-  // if (ratingValue === "1.0" || ratingValue === "2.0" || ratingValue === "3.0 || ratingValue === "4.0" || ratingValue === "5.0")
-  // {
-  //     alert("Please submit the rating before you place order.");
-  // }
-  // else
   {
     const quantity = document.getElementById("quantity-text").innerText;
     const price = document.getElementById("price").innerText;
