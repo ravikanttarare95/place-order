@@ -5,13 +5,18 @@
 }
 
 body {
-  background-color: #fef3eb;
   -webkit-text-size-adjust: 100%;
   font-family: Aclonica;
 }
 
-.color-white {
-  color: #ffffff;
+/*Light Mode*/
+.body-light {
+  background: #fef3eb;
+}
+
+/*Dark Mode*/
+.body-dark {
+  background: #282828;
 }
 
 .heading-container {
@@ -20,8 +25,14 @@ body {
   margin: 30px auto;
 }
 
-h1 {
+/*Light Mode*/
+.heading-light {
   color: #102e50;
+}
+
+/*Dark Mode*/
+.heading-dark {
+  color: #d7d4d4;
 }
 
 .btn {
@@ -31,6 +42,10 @@ h1 {
   cursor: pointer;
 }
 
+.btn:hover {
+  box-shadow: 0 0 5px 1px #3d3d3d;
+}
+
 .btn-primary {
   background-color: #000;
   color: #fff;
@@ -38,19 +53,11 @@ h1 {
   transition: all 0.17s ease-in-out;
 }
 
-.btn-primary:hover {
-  box-shadow: 0 0 5px 1px hsl(240, 2%, 59%);
-}
-
 .btn-secondary {
   background-color: #102e50;
   color: #fff;
   border: none;
   transition: all 0.17s ease-in-out;
-}
-
-.btn-secondary:hover {
-  box-shadow: 0 0 5px 1px hsl(240, 2%, 59%);
 }
 
 .btn-small {
@@ -78,6 +85,15 @@ h1 {
   margin: 0 auto 50px;
   display: flex;
   justify-content: space-between;
+}
+/*Dark Mode*/
+.main-container-dark {
+  box-shadow: 0 0 0 0 #000000;
+  background: #545454;
+}
+
+/*Light Mode*/
+.main-container-light {
   box-shadow: 0 0 20px 0 #a5a4a4;
   background: #ffffff;
 }
@@ -104,8 +120,9 @@ h1 {
 .img-container-left div {
   width: 53.5px;
   padding: 5px;
-  box-shadow: inset 0 0 6px 0 #666;
   border-radius: 2px;
+  box-shadow: inset 0 0 3px 0 #000000;
+  background: #f7fdff;
 }
 
 .img-container-left img {
@@ -196,13 +213,13 @@ h1 {
   cursor: pointer;
 }
 
-#quantity-text {
+#quantity-number {
   font-size: 25px;
   font-weight: bold;
   color: #535252;
 }
 
-.quantity {
+#quantity-text {
   color: #535252;
 }
 

@@ -11,19 +11,19 @@
     <title>Place Order</title>
 </head>
 
-<body id="body">
-    <div class="color-mode-container">
-        <img src="./image/dark-mode.png" alt="Sun Icon" width="45px" id="dark-mode-icon" onclick="toggleLightMode()">
+<body id="body" class="body-light">
+    <div class="color-mode-container" onclick="toggleLightMode()">
+        <img src="./image/light-mode.png" alt="Sun Icon" width="45px" id="light-mode-icon">
     </div>
     <div class="heading-container">
-        <h1 id="main-heading">OrderPoint</h1>
+        <h1 id="main-heading" class="heading-light">OrderPoint</h1>
     </div>
 
-    <div class="main-container" id="container-main">
+    <div class="main-container main-container-light" id="container-main">
         <div class="container-left">
             <div class="img-container">
 
-                <div class="img-container-left">
+                <div class="img-container-left" id="img-container-left">
                     <div onmouseover="showProductImage1()"><img src="./image/shoe-1.png" alt="item" id="shoe-1"></div>
                     <div onmouseover="showProductImage2()"><img src="./image/shoe-2.png" alt="item" id="shoe-2"></div>
                     <div onmouseover="showProductImage3()"><img src="./image/shoe-3.png" alt="item" id="shoe-3"></div>
@@ -60,14 +60,14 @@
 
             <div class="price-quantity-container">
 
-                <div>₹ <span id="price">2140</span> </div>
+                <div id="price-container">₹ <span id="price">2140</span> </div>
 
                 <div class="inc-dec-images">
                     <img src="./image/minus.png" alt="minus icon" onclick="dec()">
-                    <p id="quantity-text">1</p>
+                    <p id="quantity-number">1</p>
                     <img src="./image/add.png" alt="add icon" onclick="inc()">
                 </div>
-                <p class="quantity">Quantity</p>
+                <p id="quantity-text">Quantity</p>
             </div>
 
             <button class="btn btn-secondary" onclick="placeorder()">

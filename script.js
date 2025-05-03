@@ -1,14 +1,50 @@
-function toggleLightMode() {
+function darkMode() {
+  const body = document.body;
   const mainHeading = document.getElementById("main-heading");
   const mainContainer = document.getElementById("container-main");
-  const lightModeIcon = document.getElementById("dark-mode-icon");
-  const containerRight = document.getElementById("container-right");
-  const body = document.body;
+  const productName = document.getElementById("product-name");
+  const priceContainer = document.getElementById("price-container");
+  const quantityNumber = document.getElementById("quantity-number");
+  const quantityText = document.getElementById("quantity-text");
 
-  if (lightModeIcon.src.includes("light-mode.png")) {
-    lightModeIcon.src = "./image/dark-mode.png";
-  } else if (lightModeIcon.src.includes("dark-mode.png")) {
-    lightModeIcon.src = "./image/light-mode.png";
+  body.classList.add("body-dark");
+  mainHeading.classList.add("heading-dark");
+  mainContainer.classList.add("main-container-dark");
+  mainContainer.classList.remove("main-container-light");
+  productName.style.color = "#fff";
+  priceContainer.style.color = "#fff";
+  quantityNumber.style.color = "#C0C0C0";
+  quantityText.style.color = "#C0C0C0";
+}
+
+function lightMode() {
+  const body = document.body;
+  const mainHeading = document.getElementById("main-heading");
+  const mainContainer = document.getElementById("container-main");
+  const productName = document.getElementById("product-name");
+  const priceContainer = document.getElementById("price-container");
+  const quantityNumber = document.getElementById("quantity-number");
+  const quantityText = document.getElementById("quantity-text");
+
+  body.classList.remove("body-dark");
+  mainHeading.classList.remove("heading-dark");
+  mainContainer.classList.remove("main-container-dark");
+  mainContainer.classList.add("main-container-light");
+  productName.style.color = "#000";
+  priceContainer.style.color = "#000";
+  quantityNumber.style.color = "#535252";
+  quantityText.style.color = "#535252";
+}
+
+function toggleLightMode() {
+  const themeModeIcon = document.getElementById("light-mode-icon");
+
+  if (themeModeIcon.src.includes("light-mode.png")) {
+    themeModeIcon.src = "./image/dark-mode.png";
+    darkMode();
+  } else if (themeModeIcon.src.includes("dark-mode.png")) {
+    themeModeIcon.src = "./image/light-mode.png";
+    lightMode();
   }
 }
 
@@ -67,7 +103,7 @@ function previousProductImage() {
   const productImage4 = document.getElementById("shoe-4");
   const productName = document.getElementById("product-name");
   const productPrice = document.getElementById("price");
-  const QuantityText = document.getElementById("quantity-text");
+  const quantityNumber = document.getElementById("quantity-number");
   if (
     productMainImage.src.includes("camera-1.png") ||
     productMainImage.src.includes("camera-2.png") ||
@@ -81,7 +117,7 @@ function previousProductImage() {
     productImage4.src = "./image/mobile-4.png";
     productName.innerText = "Motorola g45 5G (Viva Magenta, 128 GB) (8 GB RAM)";
     productPrice.innerText = "11999";
-    QuantityText.innerText = "1";
+    quantityNumber.innerText = "1";
   } else if (
     productMainImage.src.includes("mobile-1.png") ||
     productMainImage.src.includes("mobile-2.png") ||
@@ -96,7 +132,7 @@ function previousProductImage() {
     productName.innerText =
       "Leather Officer Class Stylish Formal Brogues (Tan , 6)";
     productPrice.innerText = "2140";
-    QuantityText.innerText = "1";
+    quantityNumber.innerText = "1";
   }
 }
 
@@ -108,7 +144,7 @@ function nextProductImage() {
   const productImage4 = document.getElementById("shoe-4");
   const productName = document.getElementById("product-name");
   const productPrice = document.getElementById("price");
-  const QuantityText = document.getElementById("quantity-text");
+  const quantityNumber = document.getElementById("quantity-number");
   if (
     productMainImage.src.includes("shoe-1.png") ||
     productMainImage.src.includes("shoe-2.png") ||
@@ -122,7 +158,7 @@ function nextProductImage() {
     productImage4.src = "./image/mobile-4.png";
     productName.innerText = "Motorola g45 5G (Viva Magenta, 128 GB) (8 GB RAM)";
     productPrice.innerText = "11999";
-    QuantityText.innerText = "1";
+    quantityNumber.innerText = "1";
   } else if (
     productMainImage.src.includes("mobile-1.png") ||
     productMainImage.src.includes("mobile-2.png") ||
@@ -136,7 +172,7 @@ function nextProductImage() {
     productImage4.src = "./image/camera-4.png";
     productName.innerText = "EOS R100 (RF-S18-45mm f/4.5-6.3 IS STM)";
     productPrice.innerText = "40990";
-    QuantityText.innerText = "1";
+    quantityNumber.innerText = "1";
   }
 }
 
@@ -197,22 +233,22 @@ function glowstar5() {
   ratingNumber.style.color = "#009933";
 }
 
-const QuantityText = document.getElementById("quantity-text");
+const quantityNumber = document.getElementById("quantity-number");
 const productPrice = document.getElementById("price");
 function inc() {
-  if (parseInt(QuantityText.innerText) == 10) {
+  if (parseInt(quantityNumber.innerText) == 10) {
     alert("Quantity can not be greater than 10");
     return;
   }
-  QuantityText.innerText = parseInt(QuantityText.innerText) + 1;
+  quantityNumber.innerText = parseInt(quantityNumber.innerText) + 1;
   pricemultiply();
 }
 function dec() {
-  if (parseInt(QuantityText.innerText) == 1) {
+  if (parseInt(quantityNumber.innerText) == 1) {
     alert("Quantity can not be less than 1");
     return;
   }
-  QuantityText.innerText = parseInt(QuantityText.innerText) - 1;
+  quantityNumber.innerText = parseInt(quantityNumber.innerText) - 1;
   pricedevide();
 }
 
@@ -228,7 +264,7 @@ function pricedevide() {
 
 function placeorder() {
   {
-    const quantity = document.getElementById("quantity-text").innerText;
+    const quantity = document.getElementById("quantity-number").innerText;
     const price = document.getElementById("price").innerText;
     const productName = document.getElementById("product-name");
     alert(
