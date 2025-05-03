@@ -74,6 +74,9 @@ function previousProductImage() {
   const productImage2 = document.getElementById("shoe-2");
   const productImage3 = document.getElementById("shoe-3");
   const productImage4 = document.getElementById("shoe-4");
+  const productName = document.getElementById("product-name");
+  const productPrice = document.getElementById("price");
+  const QuantityText = document.getElementById("quantity-text");
   if (
     productMainImage.src.includes("camera-1.png") ||
     productMainImage.src.includes("camera-2.jpg") ||
@@ -85,8 +88,11 @@ function previousProductImage() {
     productImage2.src = "./image/mobile-2.jpg";
     productImage3.src = "./image/mobile-3.jpg";
     productImage4.src = "./image/mobile-4.jpg";
+    productName.innerText = "Motorola g45 5G (Viva Magenta, 128 GB) (8 GB RAM)";
+    productPrice.innerText = "11999";
+    QuantityText.innerText = "1";
   } else if (
-    productMainImage.src.includes("mobile-1.jpg") || 
+    productMainImage.src.includes("mobile-1.jpg") ||
     productMainImage.src.includes("mobile-2.jpg") ||
     productMainImage.src.includes("mobile-3.jpg") ||
     productMainImage.src.includes("mobile-4.jpg")
@@ -96,6 +102,10 @@ function previousProductImage() {
     productImage2.src = "./image/shoe-2.jpg";
     productImage3.src = "./image/shoe-3.jpg";
     productImage4.src = "./image/shoe-4.jpg";
+    productName.innerText =
+      "Leather Officer Class Stylish Formal Brogues (Tan , 6)";
+    productPrice.innerText = "2140";
+    QuantityText.innerText = "1";
   }
 }
 
@@ -105,6 +115,9 @@ function nextProductImage() {
   const productImage2 = document.getElementById("shoe-2");
   const productImage3 = document.getElementById("shoe-3");
   const productImage4 = document.getElementById("shoe-4");
+  const productName = document.getElementById("product-name");
+  const productPrice = document.getElementById("price");
+  const QuantityText = document.getElementById("quantity-text");
   if (
     productMainImage.src.includes("shoe-1.jpg") ||
     productMainImage.src.includes("shoe-2.jpg") ||
@@ -116,6 +129,9 @@ function nextProductImage() {
     productImage2.src = "./image/mobile-2.jpg";
     productImage3.src = "./image/mobile-3.jpg";
     productImage4.src = "./image/mobile-4.jpg";
+    productName.innerText = "Motorola g45 5G (Viva Magenta, 128 GB) (8 GB RAM)";
+    productPrice.innerText = "11999";
+    QuantityText.innerText = "1";
   } else if (
     productMainImage.src.includes("mobile-1.jpg") ||
     productMainImage.src.includes("mobile-2.jpg") ||
@@ -127,6 +143,9 @@ function nextProductImage() {
     productImage2.src = "./image/camera-2.jpg";
     productImage3.src = "./image/camera-3.png";
     productImage4.src = "./image/camera-4.png";
+    productName.innerText = "EOS R100 (RF-S18-45mm f/4.5-6.3 IS STM)";
+    productPrice.innerText = "40990";
+    QuantityText.innerText = "1";
   }
 }
 
@@ -187,18 +206,6 @@ function glowstar5() {
   ratingNumber.style.color = "#009933";
 }
 
-function placeorder() {
-  {
-    const quantity = document.getElementById("quantity-text").innerText;
-    const price = document.getElementById("price").innerText;
-    alert(
-      "Your order has been placed successfully!\nQuantity: " +
-        quantity +
-        "\nTotal Price: ₹" +
-        price
-    );
-  }
-}
 const QuantityText = document.getElementById("quantity-text");
 const productPrice = document.getElementById("price");
 function inc() {
@@ -224,4 +231,19 @@ function pricemultiply() {
 
 function pricedevide() {
   productPrice.innerText = parseInt(productPrice.innerText) / 2;
+}
+
+function placeorder() {
+  {
+    const quantity = document.getElementById("quantity-text").innerText;
+    const price = document.getElementById("price").innerText;
+    const productName = document.getElementById("product-name");
+    alert(
+      `Your order has been placed successfully!
+      
+Product Name: ${productName.innerText}.
+Quantity:  ${quantity}.
+Total Price: ₹ ${price}.`
+    );
+  }
 }
