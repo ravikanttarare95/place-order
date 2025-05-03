@@ -10,17 +10,9 @@ body {
   font-family: Aclonica;
 }
 
-/* .dark-mode-bg-color-body {
-  background-color: #a09e9e;
-} */
-
 .color-white {
   color: #ffffff;
 }
-
-/* .dark-mode-small-img-border {
-  border: 1px solid #102e50;
-} */
 
 .heading-container {
   width: 70%;
@@ -79,17 +71,6 @@ h1 {
   width: 100%;
 }
 
-.main-container-dark-mode {
-  border-radius: 5px;
-  overflow: hidden;
-  width: 80%;
-  margin: 0 auto 50px;
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 0 0 20px 0 #a5a4a4;
-  background-color: #5f5e5e;
-}
-
 .main-container {
   border-radius: 5px;
   overflow: hidden;
@@ -98,7 +79,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   box-shadow: 0 0 20px 0 #a5a4a4;
-  /* background: #ffffff; */
+  background: #ffffff;
 }
 
 .container-left {
@@ -141,7 +122,6 @@ h1 {
   width: 100%;
   height: auto;
   display: block;
-  /* border: 1px solid #E78B48;   */
 }
 
 .product-buttons {
@@ -151,7 +131,6 @@ h1 {
 }
 
 .container-right {
-  /* background-color: rgb(224, 227, 232); */
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -7,15 +7,8 @@ function toggleLightMode() {
 
   if (lightModeIcon.src.includes("light-mode.png")) {
     lightModeIcon.src = "./image/dark-mode.png";
-    mainHeading.classList.remove("color-white");
-    mainContainer.classList.remove("main-container-dark-mode");
-    mainContainer.classList.add("main-container");
-    body.classList.remove("dark-mode-bg-color-body");
   } else if (lightModeIcon.src.includes("dark-mode.png")) {
     lightModeIcon.src = "./image/light-mode.png";
-    mainHeading.classList.add("color-white");
-    mainContainer.classList.add("main-container-dark-mode");
-    body.classList.add("dark-mode-bg-color-body");
   }
 }
 
@@ -34,8 +27,6 @@ function showProductImage1(imageSrc) {
   } else if (productImage1.src.includes("camera-1.png")) {
     productMainImage.src = "./image/camera-1.png";
   }
-
-  //   productMainImage.src = "./image/shoe-1.jpg";
 }
 function showProductImage2(imageSrc) {
   const productMainImage = document.getElementById("product-main-img");
@@ -225,11 +216,13 @@ function dec() {
   pricedevide();
 }
 
-function pricemultiply() {//logic is not proper : need changes
+function pricemultiply() {
+  //logic is not proper : need changes
   productPrice.innerText = parseInt(productPrice.innerText) * 2;
 }
 
-function pricedevide() {//logic is not proper : need changes
+function pricedevide() {
+  //logic is not proper : need changes
   productPrice.innerText = parseInt(productPrice.innerText) / 2;
 }
 
