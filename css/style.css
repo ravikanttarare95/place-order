@@ -20,9 +20,9 @@ body {
 }
 
 .heading-container {
-  width: 70%;
+  /* width: 70%; */
   text-align: center;
-  margin: 30px auto;
+  margin: 20px auto;
 }
 
 /*Light Mode*/
@@ -82,7 +82,7 @@ body {
   border-radius: 5px;
   overflow: hidden;
   width: 80%;
-  margin: 0 auto 50px;
+  margin: 0 auto 17px;
   display: flex;
   justify-content: space-between;
 }
@@ -221,6 +221,30 @@ body {
 
 #quantity-text {
   color: #535252;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 0;
+  font-size: 12px;
+  color: grey;
+  /* background: #000; */
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.github-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 50%;
 }
 
 @media (max-width: 500px) {
