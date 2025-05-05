@@ -230,11 +230,6 @@ body {
   padding: 3px 0;
   font-size: 12px;
   color: grey;
-  /* background: #000; */
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
 }
 
 .github-icon {
