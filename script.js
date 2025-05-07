@@ -53,7 +53,7 @@ const productImage2 = document.getElementById("shoe-2");
 const productImage3 = document.getElementById("shoe-3");
 const productImage4 = document.getElementById("shoe-4");
 
-function showProductImage1(imageSrc) {
+function showProductImage1() {
   const productMainImage = document.getElementById("product-main-img");
 
   if (productImage1.src.includes("shoe-1.png")) {
@@ -64,7 +64,7 @@ function showProductImage1(imageSrc) {
     productMainImage.src = "./image/camera-1.png";
   }
 }
-function showProductImage2(imageSrc) {
+function showProductImage2() {
   const productMainImage = document.getElementById("product-main-img");
   if (productImage2.src.includes("shoe-2.png")) {
     productMainImage.src = "./image/shoe-2.png";
@@ -74,7 +74,7 @@ function showProductImage2(imageSrc) {
     productMainImage.src = "./image/camera-2.png";
   }
 }
-function showProductImage3(imageSrc) {
+function showProductImage3() {
   const productMainImage = document.getElementById("product-main-img");
   if (productImage3.src.includes("shoe-3.png")) {
     productMainImage.src = "./image/shoe-3.png";
@@ -84,7 +84,7 @@ function showProductImage3(imageSrc) {
     productMainImage.src = "./image/camera-3.png";
   }
 }
-function showProductImage4(imageSrc) {
+function showProductImage4() {
   const productMainImage = document.getElementById("product-main-img");
   if (productImage4.src.includes("shoe-4.png")) {
     productMainImage.src = "./image/shoe-4.png";
@@ -241,7 +241,7 @@ function inc() {
     return;
   }
   quantityNumber.innerText = parseInt(quantityNumber.innerText) + 1;
-  pricemultiply();
+  priceAdd();
 }
 function dec() {
   if (parseInt(quantityNumber.innerText) == 1) {
@@ -249,17 +249,37 @@ function dec() {
     return;
   }
   quantityNumber.innerText = parseInt(quantityNumber.innerText) - 1;
-  pricedevide();
+  priceMinus();
 }
 
-function pricemultiply() {
+const productMainImage = document.getElementById("product-main-img");
+const productPrices = [2140, 11999, 40990];
+function priceAdd() {
   //logic is not proper : need changes
-  productPrice.innerText = parseInt(productPrice.innerText) * 2;
+  if (productMainImage.src.includes("shoe-1.png")) {
+    productPrice.innerText =
+      parseInt(productPrice.innerText) + productPrices[0];
+  } else if (productMainImage.src.includes("mobile-1.png")) {
+    productPrice.innerText =
+      parseInt(productPrice.innerText) + productPrices[1];
+  } else {
+    productPrice.innerText =
+      parseInt(productPrice.innerText) + productPrices[2];
+  }
 }
 
-function pricedevide() {
+function priceMinus() {
   //logic is not proper : need changes
-  productPrice.innerText = parseInt(productPrice.innerText) / 2;
+  if (productMainImage.src.includes("shoe-1.png")) {
+    productPrice.innerText =
+      parseInt(productPrice.innerText) - productPrices[0];
+  } else if (productMainImage.src.includes("mobile-1.png")) {
+    productPrice.innerText =
+      parseInt(productPrice.innerText) - productPrices[1];
+  } else {
+    productPrice.innerText =
+      parseInt(productPrice.innerText) - productPrices[2];
+  }
 }
 
 function placeorder() {
