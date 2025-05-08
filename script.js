@@ -133,6 +133,8 @@ function previousProductImage() {
       "Leather Officer Class Stylish Formal Brogues (Tan , 6)";
     productPrice.innerText = "2140";
     quantityNumber.innerText = "1";
+  } else {
+    alert("First Product");
   }
 }
 
@@ -173,6 +175,8 @@ function nextProductImage() {
     productName.innerText = "EOS R100 (RF-S18-45mm f/4.5-6.3 IS STM)";
     productPrice.innerText = "40990";
     quantityNumber.innerText = "1";
+  } else {
+    alert("Last Product");
   }
 }
 
@@ -239,17 +243,19 @@ function inc() {
   if (parseInt(quantityNumber.innerText) == 10) {
     alert("Quantity can not be greater than 10");
     return;
+  } else {
+    quantityNumber.innerText = parseInt(quantityNumber.innerText) + 1;
+    priceAdd();
   }
-  quantityNumber.innerText = parseInt(quantityNumber.innerText) + 1;
-  priceAdd();
 }
 function dec() {
   if (parseInt(quantityNumber.innerText) == 1) {
     alert("Quantity can not be less than 1");
     return;
+  } else {
+    quantityNumber.innerText = parseInt(quantityNumber.innerText) - 1;
+    priceMinus();
   }
-  quantityNumber.innerText = parseInt(quantityNumber.innerText) - 1;
-  priceMinus();
 }
 
 const productMainImage = document.getElementById("product-main-img");
