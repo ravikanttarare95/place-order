@@ -255,7 +255,6 @@ function dec() {
 const productMainImage = document.getElementById("product-main-img");
 const productPrices = [2140, 11999, 40990];
 function priceAdd() {
-  //logic is not proper : need changes
   if (productMainImage.src.includes("shoe-1.png")) {
     productPrice.innerText =
       parseInt(productPrice.innerText) + productPrices[0];
@@ -269,7 +268,6 @@ function priceAdd() {
 }
 
 function priceMinus() {
-  //logic is not proper : need changes
   if (productMainImage.src.includes("shoe-1.png")) {
     productPrice.innerText =
       parseInt(productPrice.innerText) - productPrices[0];
