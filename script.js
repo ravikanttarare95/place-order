@@ -6,6 +6,7 @@ const priceContainer = document.getElementById("price-container");
 const quantityNumber = document.getElementById("quantity-number");
 const quantityText = document.getElementById("quantity-text");
 const productPrice = document.getElementById("price");
+const ratingNumber = document.getElementById("rating-number");
 
 function darkMode() {
   body.classList.add("body-dark");
@@ -166,8 +167,6 @@ const starImages2 = document.getElementById("star-2-img");
 const starImages3 = document.getElementById("star-3-img");
 const starImages4 = document.getElementById("star-4-img");
 const starImages5 = document.getElementById("star-5-img");
-const ratingNumber = document.getElementById("rating-number");
-// const ratingValue = ratingNumber.innerText;
 
 function glowstar1() {
   starImages1.src = "./image/star(5).png";
