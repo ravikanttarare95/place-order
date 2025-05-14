@@ -175,7 +175,7 @@ function glowstar1() {
   starImages4.src = "./image/star.png";
   starImages5.src = "./image/star.png";
   ratingNumber.innerText = "1.0";
-  ratingNumber.style.color = "#FF0000";
+  ratingNumber.style.color = "#E63946";
 }
 
 function glowstar2() {
@@ -185,7 +185,7 @@ function glowstar2() {
   starImages4.src = "./image/star.png";
   starImages5.src = "./image/star.png";
   ratingNumber.innerText = "2.0";
-  ratingNumber.style.color = "#FF0000";
+  ratingNumber.style.color = "#E63946";
 }
 
 function glowstar3() {
@@ -195,7 +195,7 @@ function glowstar3() {
   starImages4.src = "./image/star.png";
   starImages5.src = "./image/star.png";
   ratingNumber.innerText = "3.0";
-  ratingNumber.style.color = "#ff5c33";
+  ratingNumber.style.color = "#FF4C4C";
 }
 function glowstar4() {
   starImages1.src = "./image/star(5).png";
@@ -204,7 +204,7 @@ function glowstar4() {
   starImages4.src = "./image/star(5).png";
   starImages5.src = "./image/star.png";
   ratingNumber.innerText = "4.0";
-  ratingNumber.style.color = "#009933";
+  ratingNumber.style.color = "#25D366";
 }
 
 function glowstar5() {
@@ -214,7 +214,7 @@ function glowstar5() {
   starImages4.src = "./image/star(5).png";
   starImages5.src = "./image/star(5).png";
   ratingNumber.innerText = "5.0";
-  ratingNumber.style.color = "#009933";
+  ratingNumber.style.color = "#25D366";
 }
 
 function inc() {
