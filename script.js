@@ -8,6 +8,20 @@ const quantityText = document.getElementById("quantity-text");
 const productPrice = document.getElementById("price");
 const ratingNumber = document.getElementById("rating-number");
 
+function getThemeMode() {
+  return localStorage.getItem("theme");
+}
+
+window.onload = function () {
+  const theme = getThemeMode();
+  if (theme == "dark") {
+    darkMode();
+  } else {
+    lightMode();
+  }
+};
+
+const themeModeIcon = document.getElementById("theme-mode-icon");
 function darkMode() {
   body.classList.add("body-dark");
   mainHeading.classList.add("heading-dark");
@@ -17,6 +31,8 @@ function darkMode() {
   priceContainer.style.color = "#fff";
   quantityNumber.style.color = "#C0C0C0";
   quantityText.style.color = "#C0C0C0";
+  themeModeIcon.src = "./image/dark-mode.png";
+  localStorage.setItem("theme", "dark");
 }
 
 function lightMode() {
@@ -28,10 +44,12 @@ function lightMode() {
   priceContainer.style.color = "#000";
   quantityNumber.style.color = "#535252";
   quantityText.style.color = "#535252";
+  themeModeIcon.src = "./image/light-mode.png";
+  localStorage.setItem("theme", "light");
 }
 
 function toggleLightMode() {
-  const themeModeIcon = document.getElementById("light-mode-icon");
+  const themeModeIcon = document.getElementById("theme-mode-icon");
 
   if (themeModeIcon.src.includes("light-mode.png")) {
     themeModeIcon.src = "./image/dark-mode.png";
@@ -267,7 +285,6 @@ function placeorder() {
   {
     const quantity = quantityNumber.innerText;
     const price = productPrice.innerText;
-    const productName = document.getElementById("product-name");
     alert(
       `Your order has been placed successfully!
       
